@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-16"?>
+<InternalCombustion xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <I>10</I>
+  <M>
+    <int>40</int>
+    <int>95</int>
+    <int>120</int>
+    <int>125</int>
+    <int>95</int>
+    <int>20</int>
+  </M>
+  <V>
+    <int>20</int>
+    <int>95</int>
+    <int>170</int>
+    <int>220</int>
+    <int>270</int>
+    <int>320</int>
+  </V>
+  <T>110</T>
+  <Hm>0.03</Hm>
+  <Hv>0.0003</Hv>
+  <C>0.3</C>
+  <EngineTemperature>0</EngineTemperature>
+  <AirTemperature>0</AirTemperature>
+  <Workflow>false</Workflow>
+  <EngineTypes>InternalCombustionEngine</EngineTypes>
+</InternalCombustion>
