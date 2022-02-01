@@ -8,9 +8,10 @@ namespace TestIEngineModel
     {
         static void Main(string[] args)
         {
+            var serializer = new Serialization();
             var temperature = GetTemperatureInput();
             var TemperatureTestSite = new TestSite(new List<TestTypes> { TestTypes.Temperature });
-            var engine = Serialization.Deserialize(EngineTypes.InternalCombustionEngine, @"..\..\..\EngineXML\InternalCombustionEngine1.xml");
+            IEngine engine = serializer.Deserialize(EngineTypes.InternalCombustionEngine, @"..\..\..\EngineXML\InternalCombustionEngine1.xml");
             engine.Put(TemperatureTestSite);
             TemperatureTestSite.RunTest(engine, temperature);
         }

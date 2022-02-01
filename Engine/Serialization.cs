@@ -2,12 +2,13 @@
 using System.IO;
 using System.Xml;
 using System.Xml.Serialization;
+using TestIEngineModel.Interface;
 
 namespace TestIEngineModel
 {
-    public class Serialization
+    public class Serialization : ISerializer
     {
-        public static string Serialize(EngineTypes eT, IEngine obj)
+        public string Serialize(EngineTypes eT, IEngine obj)
         {
             XmlSerializer xsSubmit;
             switch (eT)
@@ -29,7 +30,7 @@ namespace TestIEngineModel
             }
         }
 
-        public static IEngine Deserialize(EngineTypes eT, string xmlString)
+        public IEngine Deserialize(EngineTypes eT, string xmlString)
         {
             using (TextReader reader = new StreamReader(xmlString))
             {
